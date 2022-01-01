@@ -1,0 +1,29 @@
+<canvas id="c"></canvas>
+<!-- vertex shader-->
+
+<script id="vertex-shader-2d" type="x-shader/x-vertex">
+    attribute vec2 a_postition;
+    uniform vec2 u_resolution
+
+    void main() {
+        vec2 zeroToOne = a_postition / u_resolution;
+        vec2 zeroToTwo = zeroToOne * 2.0;
+        vec2 clipSpace = zeroToTweo - 1.0;
+
+        gl_Position = vec4(clipSpace * vec2(1,-1), 0, 1);
+    }
+</script>
+
+
+<!-- fragment shader-->
+
+<script id="fragment-shader-2d" type="x-shader/x-fragment">
+    precision mediump float;
+    uniform vec4 u_color;
+
+    void main() {
+        gl_FragColor = u_color;
+    }
+</script>
+
+<script src="https://webglfundamentals.org/webgl/resources/webgl-utils.js"></script>
