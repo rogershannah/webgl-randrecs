@@ -1,29 +1,48 @@
-<canvas id="c"></canvas>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Random Rectanglex</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+        integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+        crossorigin="anonymous" defer>
+        </script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+</body>
+
 <!-- vertex shader-->
 
-<script id="vertex-shader-2d" type="x-shader/x-vertex">
-    attribute vec2 a_postition;
-    uniform vec2 u_resolution
+<!-- <script id="vertex-shader-2d" type="x-shader/x-vertex">
+        attribute vec2 a_postition;
+        uniform vec2 u_resolution
 
-    void main() {
-        vec2 zeroToOne = a_postition / u_resolution;
-        vec2 zeroToTwo = zeroToOne * 2.0;
-        vec2 clipSpace = zeroToTweo - 1.0;
+        void main() {
+            vec2 zeroToOne = a_postition / u_resolution;
+            vec2 zeroToTwo = zeroToOne * 2.0;
+            vec2 clipSpace = zeroToTweo - 1.0;
 
-        gl_Position = vec4(clipSpace * vec2(1,-1), 0, 1);
-    }
-</script>
+            gl_Position = vec4(clipSpace * vec2(1,-1), 0, 1);
+        }
+    </script> -->
 
 
-<!-- fragment shader-->
+<!-- fragment shader -->
 
-<script id="fragment-shader-2d" type="x-shader/x-fragment">
-    precision mediump float;
-    uniform vec4 u_color;
+<!-- <script id="fragment-shader-2d" type="x-shader/x-fragment">
+        precision mediump float;
+        uniform vec4 u_color;
 
-    void main() {
-        gl_FragColor = u_color;
-    }
-</script>
+        void main() {
+            gl_FragColor = u_color;
+        }
+    </script> -->
 
 <script src="https://webglfundamentals.org/webgl/resources/webgl-utils.js"></script>
+
+</html>
